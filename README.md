@@ -2,23 +2,10 @@
 
 ![ezgif com-gif-maker_3](https://user-images.githubusercontent.com/42148950/131026234-7cc0ac78-458e-4967-9995-680accec9f5b.gif)
 
-Checkout the game's page on [itch-io](https://julia-melgare.itch.io/pirate-jam)!
+Checkout the original game's page on [itch-io](https://julia-melgare.itch.io/pirate-jam)!
 
-In this game, you are stuck in a real jam - a pirate jam!
+A VR port of the Kenny Jam 2021 submission, Pirate  Jam, by Julia Melgaré and Diogo Muller. [Check out the original game's repo here!](https://github.com/Julia-Melgare/PirateJam).
+This port was made for college project, with the permission of the original authors, using the Unity engine.
 
-You are a pirate in search for treasure spots among the seven seas, which are, of course, marked by the 'X'! The wind is always blowing,  so you must rotate your ship's sails to change the direction to which you are heading. 
-
-Although there aren't any other ships for now, throughout your travels you will find that there are still dangerous obstacles that might damage your ship if you crash into them, so be careful!
-
-Some parts of the sea also have stronger currents which will give you a boost if you pass through them. Be sure to use them wisely!
-
-Controls:
-
-- A/D Left/Right arrows: turn the ship's sails
-- Mouse Wheel: aim the ship's cannons
-- Mouse Left Click: shoot cannonballs
-- R key: restart the level
-
-[Water shader based on a shader previously made by the developers](https://github.com/Julia-Melgare/Deformable-Water).
-
-![0aUZhb](https://user-images.githubusercontent.com/42148950/131026306-5561ccc0-95b5-4853-9357-746eda191f2c.gif)
+The intended use is for the Oculus Quest 2. It can be built into the system via Unity, and then be played anywhere, using the Quest 2's portable features.
+However, it also should be able to run on any other PC VR headset.
