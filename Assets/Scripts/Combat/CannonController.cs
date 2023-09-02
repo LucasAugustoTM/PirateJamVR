@@ -18,6 +18,8 @@ public class CannonController : MonoBehaviour
 
     private float mouseWheel;
 
+    public OVRInput.Touch Touch { get; } // novo
+    public OVRInput.Button Button { get; }
 
     public void Start()
     {
@@ -27,7 +29,7 @@ public class CannonController : MonoBehaviour
 
     public void Update()
     {
-        mouseWheel = Input.GetAxis("Mouse ScrollWheel");
+        mouseWheel = Input.GetAxis("Vertical");
 
         if (mouseWheel != 0)
         {
@@ -39,9 +41,10 @@ public class CannonController : MonoBehaviour
 
         }
 
-        bool fire = Input.GetMouseButtonDown(0);
+        bool fire = OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger); //Input.GetMouseButtonDown(0);
+        bool fire2 = OVRInput.Get(OVRInput.Button.SecondaryIndexTrigger);
 
-        if (fire && canFire)
+        if ((fire || fire2) && canFire)
         {
             GameObject cannonBall = Instantiate(shotPrefab, cannon.transform.position + (cannon.transform.forward / 2.5f), Quaternion.identity);
             cannonBall.GetComponent<Rigidbody>().AddForce(cannon.transform.forward * 1000f, ForceMode.Acceleration);

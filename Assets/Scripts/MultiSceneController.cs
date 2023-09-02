@@ -3,14 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MultiSceneController : MonoBehaviour
+public class MultiSceneController : MonoBehaviour 
 {
-    public string uiScene;
+    //public string uiScene; 
     public string gameplayScene;
+
+    public OVRInput.Touch Touch { get; } // novo
+    public OVRInput.Button Button { get; }
 
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))
+        if (OVRInput.Get(OVRInput.Button.Two, OVRInput.Controller.RTouch))//(Input.GetKeyDown(KeyCode.R))
         {
             Reload();
         }
@@ -22,7 +25,7 @@ public class MultiSceneController : MonoBehaviour
         SceneManager.LoadSceneAsync("Level01");
 
         SceneManager.LoadSceneAsync(gameplayScene, LoadSceneMode.Additive);
-        SceneManager.LoadSceneAsync(uiScene, LoadSceneMode.Additive);
+        //SceneManager.LoadSceneAsync(uiScene, LoadSceneMode.Additive);
     }
 
     public void LoadNextLevel()
@@ -50,7 +53,7 @@ public class MultiSceneController : MonoBehaviour
     {
         SceneManager.UnloadSceneAsync(name);
         SceneManager.UnloadSceneAsync(gameplayScene);
-        SceneManager.UnloadSceneAsync(uiScene);
+        //SceneManager.UnloadSceneAsync(uiScene);
     }
 
     public void Reload()
@@ -68,7 +71,7 @@ public class MultiSceneController : MonoBehaviour
         if (level == "TitleScreen") return;
 
         SceneManager.LoadSceneAsync(gameplayScene, LoadSceneMode.Additive);
-        SceneManager.LoadSceneAsync(uiScene, LoadSceneMode.Additive);
+        //SceneManager.LoadSceneAsync(uiScene, LoadSceneMode.Additive);
     }
 
     public void LoadMenu()

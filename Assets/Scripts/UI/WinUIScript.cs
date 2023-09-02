@@ -8,6 +8,10 @@ public class WinUIScript : MonoBehaviour
     GameObject winCanvas;
     [SerializeField]
     GameObject loseCanvas;
+    [SerializeField]
+    GameObject Mesh;
+    [SerializeField]
+    GameObject barco;
 
     private void OnDisable()
     {
@@ -21,9 +25,15 @@ public class WinUIScript : MonoBehaviour
  
     private void CheckWin(bool win)
     {
-        if (win)
-            winCanvas.SetActive(true);
-        else
+        if (win) {
+            winCanvas.SetActive(true); 
+            Mesh.SetActive(true);
+            barco.GetComponent<MovementController>().windSpeed = 0;
+            }
+        else {
             loseCanvas.SetActive(true);
+            Mesh.SetActive(true);
+            barco.GetComponent<MovementController>().windSpeed = 0;
+        }
     }
 }

@@ -7,18 +7,21 @@ TagManager:
   - SpeedUp
   - CannonBall
   - Obstacle
+  - SamplesInfoPanel
+  - steer
+  - sail
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - lemeIgnore
   - Water
   - UI
-  - 
-  - 
+  - Stencil Mask
+  - Stencil Vis
   - Ripples
-  - 
-  - 
+  - barco
+  - UI some
   - 
   - 
   - 

@@ -12,9 +12,13 @@ public class SteeringController : MonoBehaviour
     [SerializeField]
     private float rotationSpeed;
 
+    [SerializeField]
+    private GameObject Steer; // nova
+
     private float input;
     private float inputSpeed = 2f;
     private float sailRotation;
+    
 
     private void FixedUpdate()
     {
@@ -22,20 +26,21 @@ public class SteeringController : MonoBehaviour
 
 
         transform.GetComponent<Rigidbody>().AddRelativeTorque(0, sailRotation / rotationSpeed, 0, ForceMode.Acceleration);
-
+        Steer = GameObject.FindGameObjectWithTag("steer"); // nova
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        input = Input.GetAxis("Horizontal") / inputSpeed;
+        //input = Input.GetAxis("Horizontal") / inputSpeed;
+        input = Steer.transform.localRotation.z / inputSpeed;
 
         Vector3 myRotation = Vector3.zero;
 
         foreach (var item in sails)
         {
-            item.transform.Rotate(0, input, 0);
+            item.transform.Rotate(0, input*3*(-1), 0); // novo input*4*-1
 
             myRotation = item.transform.localRotation.eulerAngles;
 
