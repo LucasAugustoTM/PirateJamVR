@@ -1,6 +1,8 @@
 # Pirate Jam
 
-![gif1](pjvr1git.gif)
+<p align="center">
+<img src="pjvr1git.png" width=400>
+</p>
 
 Checkout the original game's page on [itch-io](https://julia-melgare.itch.io/pirate-jam)!
 
@@ -10,4 +12,6 @@ This port was made for a college project, with the permission of the original au
 The intended use is for the Oculus Quest 2. It can be built into the system via Unity, and then be played anywhere, using the Quest 2's portable features.
 However, it also should be able to run on any other PC VR headset.
 
-![gif2](pjvr2git.gif)
+<p align="center">
+<img src="pjvr2git.png" width=400>
+</p>
