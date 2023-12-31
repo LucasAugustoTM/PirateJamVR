@@ -1,7 +1,7 @@
 # Pirate Jam
 
 <p align="center">
-<img src="pjvr1git.gif">
+<img src="pjvr1git.gif" width=400>
 </p>
 
 Checkout the original game's page on [itch-io](https://julia-melgare.itch.io/pirate-jam)!
@@ -13,5 +13,5 @@ The intended use is for the Oculus Quest 2. It can be built into the system via 
 However, it also should be able to run on any other PC VR headset.
 
 <p align="center">
-<img src="pjvr2git.gif">
+<img src="pjvr2git.gif" width=400>
 </p>
